@@ -1,0 +1,47 @@
+p {
+  text-indent: 20px;
+  margin: 5px;
+}
+h1 {
+  margin-top: 100px;
+  margin-bottom: 10px;
+  font-size: 40px;
+  text-align: center;
+}
+h2 {
+  margin: 0;
+  margin-bottom: 50px;
+  font-weight: 100;
+}
+.format_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.format_page button {
+  margin: 30px 0 10px 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 10px;
+  background-color:rgb(162, 187, 235);
+  color: rgb(26, 29, 44);
+}
+.format_page button:hover {
+  transition: .4s ease;
+  background-color: rgb(32, 32, 58);
+  color: rgb(182, 179, 214);
+  cursor: pointer;
+}
+.format_page button:active {
+  transition: 0s ease;
+  background-color: rgb(11, 13, 24);
+  color: rgb(216, 215, 228);
+  cursor: pointer;
+}
+.center_page {
+  width: 1000px;
+    max-width: 100%;
+    margin: auto;
+}

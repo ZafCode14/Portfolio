@@ -1,0 +1,91 @@
+@keyframes swing1 {
+    0% {
+        transform: translate(-60vw, -500px);
+    }
+    50% {
+        transform: translate(100vw, 500px);
+    }
+    100% {
+        transform: translate(-60vw, -500px);
+    }
+}
+@keyframes swing2 {
+    0% {
+        transform: translate(100vw, 500px);
+    }
+    50% {
+        transform: translate(-60vw, -500px);
+    }
+    100% {
+        transform: translate(100vw, 500px);
+    }
+}
+@keyframes swing3 {
+    0% {
+        transform: translate(100vw, -500px);
+    }
+    50% {
+        transform: translate(-60vw, 500px);
+    }
+    100% {
+        transform: translate(100vw, -500px);
+    }
+}
+@keyframes swing4 {
+    0% {
+        transform: translate(-60vw, 500px);
+    }
+    50% {
+        transform: translate(100vw, -500px);
+    }
+    100% {
+        transform: translate(-60vw, 500px);
+    }
+}
+.animate_container {
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    overflow: hidden;
+}
+.circle1 {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-color: rgba(8, 0, 255, 0.3);
+    animation-name: swing1;
+    animation-iteration-count: infinite;
+    animation-duration: 40s;
+}
+.circle2 {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.3);
+    animation-name: swing2;
+    animation-iteration-count: infinite;
+    animation-duration: 35s;
+}
+.circle3 {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-color: rgba(255, 247, 0, 0.3);
+    animation-name: swing3;
+    animation-iteration-count: infinite;
+    animation-duration: 45s;
+}
+.circle4 {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-color: rgba(0, 255, 13, 0.3);
+    animation-name: swing4;
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+}

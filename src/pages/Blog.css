@@ -1,0 +1,59 @@
+.all_posts {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: 2s ease;
+    min-height: 105vh;
+}
+.post_container {
+    width: 90%;
+    max-width: 800px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.create_container {
+    max-width: 80%;
+    width: 800px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.post_container input, .create_container input {
+    width: 300px;
+}
+.post_container textarea, .create_container textarea {
+    width: 100%;
+    height: 200px;
+}
+.post_container h3 {
+    margin: 0;
+    max-width: 300px;
+    text-align: center;
+}
+.post_container p {
+    max-width: 700px;
+}
+.post_buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.post_buttons button {
+    width: 50%;
+    font-size: 1.3rem;
+    height: 60px;
+    margin: 10px 5px;
+}

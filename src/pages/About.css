@@ -1,0 +1,17 @@
+.about_page {
+    max-width: 900px;
+    padding: 3vw;
+    margin: auto;
+}
+.about_page h2 {
+    text-align: center;
+    max-width: 500px;
+}
+.about_page h4 {
+    align-self: flex-start;
+    margin: 1vw 0px 0px 6vw;
+}
+.about_page p {
+    margin: 10px auto;
+    max-width: 800px;
+}

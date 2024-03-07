@@ -1,0 +1,31 @@
+.edit_account {
+    width: 100%;
+    min-height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.account {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.account_row_column {
+    display: flex;
+    flex-direction: column;
+}
+.account_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.edit_label {
+    font-weight: bold;
+    width: 150px;
+}
+.edit_value {
+    width: 200px;
+}

@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: black;
+}
+.bc_1 {
+  background-color: rgb(24, 25, 43);
+}
+.bc_2 {
+  background-color: rgb(101, 106, 177);
+}
+.bc_3 {
+  background-color: rgb(242, 246, 255);
+}
+.c_1 {
+  color: rgb(216, 223, 238);
+}
+.c_2 {
+  color: rgb(21, 24, 44);
+}

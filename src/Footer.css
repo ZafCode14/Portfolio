@@ -1,0 +1,27 @@
+footer {
+    background-color: #131313;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #FAF8FF;
+    margin-top: 100px;
+}
+.footer_container {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FAF8FF;
+}
+.footer_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #FAF8FF;
+    width: 90vw;
+}
+.footer_copyright {
+    padding: 60px 0 40px 0;
+}

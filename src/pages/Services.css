@@ -1,0 +1,27 @@
+.section_page {
+    max-width: 1200px;
+    padding: 3vw;
+    margin: auto;
+}
+.section_page h2 {
+    max-width: 500px;
+    text-align: center;
+}
+.all_services {
+    max-width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.service {
+    width: 300px;
+    margin: 2%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+}
+.service h3 {
+    text-align: center;
+}
+.service p {
+    padding: 1vw;
+}
