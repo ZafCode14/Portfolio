@@ -30,6 +30,7 @@ function Header(props) {
                 console.error("Error fetching data", error);
             })
         }
+    // eslint-disable-next-line
     }, [timeToRefresh])
 
     const logout = () => {
@@ -78,6 +79,7 @@ function Header(props) {
             logout={logout}
             isNav={isNav}
             isAuthenticated={props.isAuthenticated}
+            isStaff={props.isStaff}
             />
         </header>
     );

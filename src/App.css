@@ -26,6 +26,7 @@ h2 {
   padding: 10px 30px;
   border-radius: 10px;
   background-color:rgb(162, 187, 235);
+  border: 1px solid black;
   color: rgb(26, 29, 44);
 }
 .format_page button:hover {

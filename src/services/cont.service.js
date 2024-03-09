@@ -2,7 +2,7 @@ import axios from 'axios'
 import authHeader from './auth.header';
 
 const create_message = async (values) => {
-    return axios.post("/contact/add", values)
+    return axios.post("https://web-01.develapp.tech/api/contact/add", values)
     .then((response) => {
         return response.data;
     })
@@ -12,7 +12,7 @@ const create_message = async (values) => {
 }
 
 const get_all_messages = async () => {
-    return axios.get("contact/all", 
+    return axios.get("https://web-01.develapp.tech/api/contact/all", 
         {headers: authHeader()}
     )
     .then((response) => {

@@ -24,6 +24,7 @@ function App() {
                 setIsStaff(result.claims.is_staff);
             })
         }
+    // eslint-disable-next-line
     }, [])
     let isAuthenticated
     if (user) {

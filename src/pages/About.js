@@ -1,7 +1,11 @@
 import React from 'react';
 import "./About.css"
+import { Link } from 'react-router-dom';
 
 function About() {
+    const toTop = () => {
+        window.scrollTo(0, 0)
+    }
     return (
         <div className='about_page format_page'>
             <h1>About Us</h1>
@@ -23,7 +27,7 @@ function About() {
             <p>At develapp, we go beyond being just a service provider – we are your partners in success. We are committed to understanding your unique business needs, collaborating closely with you throughout the development process, and delivering solutions that not only meet but exceed your expectations.</p>
             <p>Ready to elevate your web presence and unlock the full potential of your business? Trust develapp to be your guide in the digital realm. Let's embark on a journey of innovation, creativity, and online success together.</p>
             <p>Choose develapp – Where Your Vision Meets Digital Excellence!</p>
-            <button>Contact Now</button>
+            <Link className='link' to={'/contact'}><button onClick={toTop}>Contact Now</button></Link>
         </div>
     );
 }

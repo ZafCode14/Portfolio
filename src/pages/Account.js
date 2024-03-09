@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import AuthService from '../services/auth.service'
 import "./Account.css"
+import { useNavigate } from 'react-router-dom';
 
 function Account(props) {
     const [values, setValues] = useState({
@@ -14,6 +15,7 @@ function Account(props) {
         confirmNewPassword: ""
     });
 
+    const navigate = useNavigate();
     const inputs = [
         {
             id: 1,
@@ -84,6 +86,7 @@ function Account(props) {
                 console.log(error);
             })
         }
+    // eslint-disable-next-line
     }, [])
 
 
@@ -110,6 +113,8 @@ function Account(props) {
 
     const logout = () => {
         AuthService.logout();
+        navigate("/");
+        window.location.reload();
     }
     console.log(values);
     return (

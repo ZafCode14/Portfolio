@@ -29,6 +29,9 @@ function Services() {
             main: "Ongoing support, updates, and maintenance services to ensure websites remain functional"
         }, 
     ]
+    const toTop = () => {
+        window.scrollTo(0, 0)
+    }
     return (
         <div className='section_page format_page'>
             <h1>Services</h1>
@@ -44,7 +47,7 @@ function Services() {
                     )
                 })}
             </div>
-            <Link className='link' to={'/contact'}><button>Contact Now</button></Link>
+            <Link className='link' to={'/contact'}><button onClick={toTop}>Contact Now</button></Link>
         </div>
     );
 }

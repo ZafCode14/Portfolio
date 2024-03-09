@@ -19,6 +19,7 @@ function Blog(props) {
                 setUser(result.claims);
             })
         }
+    // eslint-disable-next-line
     }, [])
 
     const submit_create_post = (e) => {

@@ -2,14 +2,14 @@ import axios from 'axios'
 import authHeader from './auth.header';
 
 const register = async (values) => {
-    return axios.post("/auth/register", values)
+    return axios.post("https://web-01.develapp.tech/api/auth/register/", values)
     .then((response) => {
         return response.data;
     })
 }
 
 const edit = async (values) => {
-    return axios.put(`/users/edit/${values.userId}`, values, 
+    return axios.put(`https://web-01.develapp.tech/api/users/edit/${values.userId}`, values, 
         {headers: authHeader()}
     )
     .then((response) => {
@@ -21,7 +21,7 @@ const edit = async (values) => {
 }
 
 const login = async (username, password) => {
-    return axios.post("/auth/login", {username, password})
+    return axios.post("https://web-01.develapp.tech/api/auth/login", {username, password})
         .then((response) => {
             if (response.data.accessToken) {
                 localStorage.setItem("user", JSON.stringify(response.data));
@@ -43,7 +43,7 @@ const getCurrentUser = () => {
 
 const refresh = async () => {
     try {
-        const response = await axios.get("/auth/refresh", {
+        const response = await axios.get("https://web-01.develapp.tech/api/auth/refresh", {
             headers: {Authorization: `Bearer ${getCurrentUser().refreshToken}`}
         });
         
@@ -62,7 +62,7 @@ const refresh = async () => {
 
 const data = async () => {
     try {
-        const response = await axios.get("/auth/whoami", {
+        const response = await axios.get("https://web-01.develapp.tech/api/auth/whoami", {
             headers: authHeader()
         });
         return response.data;
