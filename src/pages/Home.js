@@ -4,14 +4,17 @@ import Services from "./Services"
 import Contact from "./Contact"
 import { Link } from 'react-router-dom';
 import HeroAnimate from '../components/HeroAnimate'
+import MessageSent from "../components/MessageSent"
 
-function Home() {
+function Home(props) {
     const toTop = () => {
         window.scrollTo(0, 0)
     }
     return (
         <div className='home_container'>
             <HeroAnimate/>
+            <MessageSent messageSuccess={props.messageSuccess} text={"Message sent Successfully"}/>
+            <MessageSent messageSuccess={props.loginSuccess} text={"Logged in Successfully"}/>
             <section className='hero_section format_page bc_3 c_2'>
                 <div>
                     <h1>Create Amazing Websites</h1>
@@ -23,7 +26,7 @@ function Home() {
                 <Services minHight={"none"}/>
             </section>
             <section className='contact_section c_2'>
-                <Contact/>
+                <Contact handleSuccess={props.handleSuccess}/>
             </section>
             <section className='faq_section center_page c_2'>
                 <h1>Frequent Questions</h1>

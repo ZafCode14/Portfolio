@@ -24,16 +24,27 @@ header {
   margin: 0 10px;
   text-decoration: none;
 }
+.register {
+  background-color: #1A5B7C;
+  border-radius: 5px;
+  padding: 5px 20px;
+  transition: .4s;
+}
+.register:hover {
+  background-color: #00AAB9;
+}
+.register:active {
+  background-color: #6BFBCE;
+}
 .narrow_header {
   display: none;
 }
 .nav {
   position: absolute;
-  right: 0px;
+  right: 10px;
   top: 20px;
 }
 .bars {
-  height: 80px;
   color: aliceblue;
   display: flex;
   align-items: center;
@@ -42,9 +53,9 @@ header {
   cursor: pointer;
 }
 .bar {
-  width: 40px;
+  width: 35px;
   height: 3px;
-  margin: 6px 20px;
+  margin: 6px 0px;
   border-radius: 5px;
 }
 .link:hover {

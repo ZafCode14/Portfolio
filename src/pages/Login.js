@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import AuthService from '../services/auth.service'
 import FormInput from '../components/FormInput'
+import MessageSent from "../components/MessageSent"
 
-function Login() {
+function Login(props) {
   const [values, setValues] = useState({
     username: "",
     password: "",
@@ -57,6 +58,7 @@ function Login() {
   console.log(values);
   return (
     <div className="login_form format_page">
+      <MessageSent messageSuccess={props.registerSuccess} text={"Account created Successfully"}/>
       <h1>Login</h1>
       <form onSubmit={handleSubmit} className="form_tag bc_3">
         {inputs.map((input) => {

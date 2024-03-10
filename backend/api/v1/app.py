@@ -8,6 +8,7 @@ grandparent_dir = os.path.abspath(os.path.join(parent_dir, os.pardir))
 sys.path.append(grandparent_dir)
 
 from flask import Flask, jsonify
+from flask_cors import CORS
 from extensions import db, jwt
 from api.v1.views.auth import auth_bp
 from api.v1.views.users import user_bp
@@ -20,6 +21,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
+CORS(app)
 
 app.config.from_prefixed_env()
 
@@ -42,7 +44,7 @@ def user_lookup_callback(jwt_headers, jwt_data):
 #additional claims
 @jwt.additional_claims_loader
 def make_additional_claims(identity):
-    if identity == "04a49b6f-eeca-45d2-b980-da02d622d6f6":
+    if identity == "52c6b9c1-10b6-42c6-aa8b-db9b3b0af5f2":
         return {"is_staff": True}
     return {"is_staff": False}
 

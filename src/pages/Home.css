@@ -2,9 +2,6 @@ section {
     min-height: 500px;
     width: 100%;
 }
-.hero_section div{
-    z-index: 1;
-}
 .hero_section h2 {
     max-width: 600px;
     text-align: center;
@@ -20,8 +17,4 @@ section {
 }
 .faq_section p , .faq_section h4{
     padding: 0 3vw;
-}
-.section_page {
-    border-top: 1px solid rgb(179, 179, 179);
-    box-shadow: -10px -10px 10px;
 }

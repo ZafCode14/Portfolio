@@ -1,0 +1,18 @@
+.message_container {
+    position: absolute;
+    top: 530px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 3000;
+}
+.message_success {
+    width: 700px;
+    margin: auto;
+    max-width: 90%;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: 2px solid green;
+    padding-left: 20px;
+    transition: 1s;
+}

@@ -16,6 +16,14 @@ body {
 .bc_3 {
   background-color: rgb(242, 246, 255);
 }
+
+.bc_gr {
+  background-color: rgb(157, 224, 144);
+}
+.bc_w {
+  background-color: rgb(255, 255, 255);
+}
+
 .c_1 {
   color: rgb(216, 223, 238);
 }

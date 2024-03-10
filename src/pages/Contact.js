@@ -4,7 +4,7 @@ import "./Contact.css"
 import ContService from "../services/cont.service"
 import { useNavigate } from 'react-router-dom';
 
-function Contact() {
+function Contact(props) {
     const [values, setValues] = useState({
         name: "",
         email: "",
@@ -15,10 +15,14 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        ContService.create_message(values).then(() => {
-            console.log("message was created");
+        ContService.create_message(values)
+        .then(() => {
             navigate("/");
-        }, (error) => {
+            window.scrollTo(0, 0);
+            props.handleSuccess();
+            setValues({name: "", email: "", message: ""})
+        })
+        .catch((error) => {
             console.log("!!!!!" + error);
         })
     }
@@ -42,7 +46,7 @@ function Contact() {
                     onChange={onChange}
                     required={true}
                     />
-                    <label>email:</label>
+                    <label>Email:</label>
                     <input
                     className='form_input'
                     placeholder='Enter your email'
@@ -52,7 +56,7 @@ function Contact() {
                     onChange={onChange}
                     required={true}
                     />
-                    <label>message:</label>
+                    <label>Message:</label>
                     <textarea
                     className='form_input'
                     placeholder='Enter your message'

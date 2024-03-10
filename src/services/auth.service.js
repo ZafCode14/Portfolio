@@ -2,7 +2,7 @@ import axios from 'axios'
 import authHeader from './auth.header';
 
 const register = async (values) => {
-    return axios.post("https://web-01.develapp.tech/api/auth/register/", values)
+    return axios.post("https://web-01.develapp.tech/api/auth/register", values)
     .then((response) => {
         return response.data;
     })

@@ -25,20 +25,17 @@ h2 {
   font-weight: bold;
   padding: 10px 30px;
   border-radius: 10px;
-  background-color:rgb(162, 187, 235);
-  border: 1px solid black;
-  color: rgb(26, 29, 44);
+  background-color: #1A5B7C;
+  color: aliceblue;
+  border: none;
+  transition: .4s ease;
 }
 .format_page button:hover {
-  transition: .4s ease;
-  background-color: rgb(32, 32, 58);
-  color: rgb(182, 179, 214);
+  background-color: #00AAB9;
   cursor: pointer;
 }
 .format_page button:active {
-  transition: 0s ease;
-  background-color: rgb(11, 13, 24);
-  color: rgb(216, 215, 228);
+  background-color: #6BFBCE;
   cursor: pointer;
 }
 .center_page {

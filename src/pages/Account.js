@@ -115,6 +115,7 @@ function Account(props) {
         AuthService.logout();
         navigate("/");
         window.location.reload();
+        window.scrollTo(0, 0);
     }
     console.log(values);
     return (

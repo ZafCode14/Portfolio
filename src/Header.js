@@ -69,7 +69,7 @@ function Header(props) {
                 :
                 <div className='login_register wide_header'>
                     <Link className='link c_1' to={'/login'} onClick={toTop}>Login</Link>
-                    <Link className='link c_1' to={'/register'} onClick={toTop}>Register</Link>
+                    <Link className='link c_1 register' to={'/register'} onClick={toTop}>Register</Link>
                 </div>
                 }
             </div>

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import AuthService from '../services/auth.service'
 import FormInput from '../components/FormInput'
 
-function Register() {
+function Register(props) {
   const [values, setValues] = useState({
     username: "",
     email: "",
@@ -62,6 +62,7 @@ function Register() {
       await AuthService.register(values)
       .then(() => {
         navigate("/login");
+        props.handleRegister();
       }, (error) => {
         setErrorMessage("Username already exists")
         console.log(error);
