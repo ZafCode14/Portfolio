@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/misha/Desktop/alx/portfolio/backend/env"
+set -gx VIRTUAL_ENV "/home/misha/Desktop/alx/Portfolio/backend/env"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

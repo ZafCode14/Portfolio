@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import AuthService from '../services/auth.service'
 import FormInput from '../components/FormInput'
 
 function Register(props) {
@@ -59,18 +58,14 @@ function Register(props) {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      await AuthService.register(values)
-      .then(() => {
-        navigate("/login");
-        props.handleRegister();
-      }, (error) => {
-        setErrorMessage("Username already exists")
-        console.log(error);
-      });
-    } catch (err) {
-      console.log(err);
+      navigate("/login");
+      props.handleRegister();
+    } catch (error) {
+      setErrorMessage("Username already exists");
+      console.log(error);
     }
-  }
+  };
+
 
   const onChange = (e) => {
     setValues({...values, [e.target.name]: e.target.value});

@@ -1,0 +1,94 @@
+@keyframes slideChat {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.open_room {
+    z-index: 1000;
+    height: 100%;
+    width: 500px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0px 0px 50px 10px;
+
+    animation-name: slideChat;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@media (max-width: 500px) {
+    .open_room {
+        height: 100%;
+        top: 0;
+        border-radius: 0;
+    }
+}
+.room_header {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+.chat_area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.chat_area::-webkit-scrollbar {
+    width: 2px;
+}
+.chat_area::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.chat_area::-webkit-scrollbar-thumb {
+    background: rgb(121, 121, 121);
+}
+.chat_area::-webkit-scrollbar-thumb:hover {
+    background: green;
+}
+.chat_area h3 {
+    margin: 5px;
+    padding: 0 20px;
+    border-radius: 50px;
+    font-weight: 100;
+}
+.input_send {
+    display: flex;
+    height: 30px;
+    padding: 10px;
+}
+.input_send textarea {
+    flex: 1;
+    border-radius: 50px;
+    resize: none;
+    padding: 0 10px;
+    border: none;
+}
+.input_send button {
+    border-radius: 50px;
+    margin-left: 10px;
+    width: 60px;
+    border: 1px solid rgb(112, 112, 112);
+}
+.right_arrow {
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    transform: scaleY(1.2) scaleX(.8);
+    position: absolute;
+    right: 5px;
+    top: -13px;
+    transition: .3s;
+}
+.right_arrow:hover {
+    color: #d6d6d6;
+    cursor: pointer;
+}

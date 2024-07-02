@@ -46,3 +46,16 @@ def edit_user(user_id):
     user.save()
 
     return jsonify({"message": "User information updated"}), 200
+
+
+@user_bp.get("/<user_id>")
+@jwt_required()
+def get_user(user_id):
+    user = User.get_user_by_id(user_id)
+    return jsonify({
+        "id": user.id,
+        "username": user.username,
+        "email": user.email,
+        "firsName": user.firstName,
+        "lastName": user.lastName
+    }), 200

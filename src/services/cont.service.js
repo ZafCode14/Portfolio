@@ -1,8 +1,10 @@
 import axios from 'axios'
 import authHeader from './auth.header';
+import proxy from './proxy'
+
 
 const create_message = async (values) => {
-    return axios.post("https://web-01.develapp.tech/api/contact/add", values)
+    return axios.post(proxy + "contact/add", values)
     .then((response) => {
         return response.data;
     })
@@ -12,7 +14,19 @@ const create_message = async (values) => {
 }
 
 const get_all_messages = async () => {
-    return axios.get("https://web-01.develapp.tech/api/contact/all", 
+    return axios.get(proxy + "contact/all", 
+        {headers: authHeader()}
+    )
+    .then((response) => {
+        return response.data;
+    })
+    .catch((error) => {
+        console.error(error);
+    })
+}
+
+const delete_message = async (id) => {
+    return axios.delete(proxy + `contact/delete/${id}`, 
         {headers: authHeader()}
     )
     .then((response) => {
@@ -25,7 +39,8 @@ const get_all_messages = async () => {
 
 const ContService = {
     create_message,
-    get_all_messages
+    get_all_messages,
+    delete_message
 }
 
 export default ContService;

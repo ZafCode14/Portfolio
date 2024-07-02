@@ -1,13 +1,23 @@
-.show_hide_bar {
+.navigation_slider {
   position: fixed;
   top: 0;
   height: 100%;
+  width: 100%;
+  display: flex;
+  transition: .5s ease-in-out;
+}
+.exit_navigation_slider {
+    height: 100%;
+    flex: 1;
+}
+.show_hide_bar {
+  height: 100%;
   width: 300px;
+  max-width: 100%;
+  opacity: .98;
   display: flex;
   align-items: center;
   flex-direction: column;
-  opacity: .95;
-  transition: 1s ease-in-out;
 }
 .sidebar_main_links {
     display: flex;
@@ -17,15 +27,24 @@
 .sidebar_main_links .link {
     margin: 10px 0;
 }
-.sidebar_account_links {
+.sidebar_logout {
     position: relative;
-    top: 30px;
+    top: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.sidebar_account_links .link{
+    background-color: rgb(5, 5, 27);
+    border-radius: 5px;
+    border: 1px solid rgb(146, 0, 0);
+    padding: 2px 10px;
+    color: rgb(146, 0, 0);
     cursor: pointer;
+    font-weight: bold;
+    transition: .5s;
+}
+.sidebar_logout:hover {
+    background-color: rgb(139, 139, 194);
+    color: rgb(146, 0, 0);
 }
 .login_register_sidebar {
     position: absolute;

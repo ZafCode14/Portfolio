@@ -21,6 +21,7 @@
     border-radius: 10px;
     box-shadow: 3px 3px 10px;
     overflow: hidden;
+    transition: 2s;
 }
 .service h3 {
     text-align: center;

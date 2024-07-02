@@ -1,6 +1,10 @@
 from extensions import db
 from uuid import uuid4
 from werkzeug.security import generate_password_hash, check_password_hash
+from models.room import Room
+from models.message import Message
+from models.association import user_room_association
+
 
 class User(db.Model):
     __tablename__ = "users"
@@ -11,7 +15,7 @@ class User(db.Model):
     firstName = db.Column(db.String(50))
     lastName = db.Column(db.String(50))
     posts = db.relationship("Post", backref="user", cascade="all, delete-orphan")
-
+    rooms = db.relationship('Room', secondary=user_room_association, back_populates='users')
 
     def __repr__(self):
         return f"<User {self.username}"

@@ -1,24 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import PostService from '../services/post.service';
-import AuthService from '../services/auth.service';
 import "./Blog.css"
 
 function Blog(props) {
     const [editValues, setEditValues] = useState({})
     const [posts, setPosts] = useState({})
-    const [user, setUser] = useState({})
     const [values, setValues] = useState({title: "", main: ""})
 
     useEffect(() => {
         PostService.get_all_posts().then((result) => {
             setPosts(result)
         })
-
-        if (props.user) {
-            AuthService.data().then((result) => {
-                setUser(result.claims);
-            })
-        }
     // eslint-disable-next-line
     }, [])
 
@@ -71,7 +63,7 @@ function Blog(props) {
     return (
         <div className='all_posts format_page'>
             <h1>Blog</h1>
-            {user.is_staff &&
+            {props.user?.claims.is_staff &&
             <form onSubmit={submit_create_post} className='create_container bc_3'>
                 <input 
                 type='text'
@@ -97,7 +89,7 @@ function Blog(props) {
                         <div className='post_container bc_3' key={value.created_at}>
                             <h3>{value.title}</h3>
                             {value.main.split("\n").map((par, index) => (<p key={index}>{par}</p>))}
-                            {user.sub === value.user_id && 
+                            {props.user?.claims.sub === value.user_id && 
                             <div className='post_buttons'>
                                 <button onClick={() => handle_edit(value.created_at, value)}>Edit</button>
                                 <button onClick={() => handle_delete(value.created_at)}>Delete</button>

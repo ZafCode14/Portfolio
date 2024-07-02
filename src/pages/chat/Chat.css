@@ -1,0 +1,7 @@
+.chat_button {
+    position: fixed;
+    bottom: 5%;
+    right: 5vh;
+    flex-direction: column;
+    z-index: 1000;
+}

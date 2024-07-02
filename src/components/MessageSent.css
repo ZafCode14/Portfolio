@@ -1,10 +1,28 @@
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+        top: 0px;
+    }
+    10% {
+        opacity: 1;
+        top: 73px;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 .message_container {
     position: absolute;
-    top: 530px;
+    top: 73px;
     width: 100%;
     display: flex;
     justify-content: center;
-    z-index: 3000;
+    animation-name: fadeOut;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
 }
 .message_success {
     width: 700px;

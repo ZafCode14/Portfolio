@@ -1,6 +1,8 @@
 from flask import Blueprint, jsonify, request
 from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required, get_jwt, current_user, get_jwt_identity
 from models.user import User
+from models.room import Room
+from models.message import Message, NewMessage
 
 auth_bp = Blueprint("auth", __name__)
 
@@ -19,7 +21,30 @@ def register_user():
     new_user.set_password(data.get("password"))
     new_user.save()
 
-    return jsonify({"message": "User Created"}), 201
+    user_2 = User().get_user_by_id("2ba8dc31-8392-4d14-90ee-4404463d9398")
+
+    room = Room()
+    room.users.append(new_user)
+    room.users.append(user_2)
+    room.save()
+
+    message = Message()
+    message.message = "Hello, this is a private chat and I am your personal web developer, feel free to ask me anything you like. Looking forward to working with you!!"
+    message.user_id = user_2.id
+    message.room_id = room.id
+    message.save()
+
+    new_message = NewMessage()
+    new_message.message_id = message.id
+    new_message.user_id = new_user.id
+    new_message.room_id = room.id
+    new_message.save()
+
+    return jsonify({
+        "user_id": new_user.id,
+        "username": new_user.username,
+        "email": new_user.email
+    }), 201
 
 
 @auth_bp.post("/login")

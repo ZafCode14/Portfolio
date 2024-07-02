@@ -5,6 +5,7 @@ import Contact from "./Contact"
 import { Link } from 'react-router-dom';
 import HeroAnimate from '../components/HeroAnimate'
 import MessageSent from "../components/MessageSent"
+import Slider from '../components/Slider';
 
 function Home(props) {
     const toTop = () => {
@@ -22,6 +23,7 @@ function Home(props) {
                     <Link onClick={toTop} className='link' to={'/contact'}><button>Contact Now</button></Link>
                 </div>
             </section>
+            <Slider/>
             <section className='services_section c_2'>
                 <Services minHight={"none"}/>
             </section>

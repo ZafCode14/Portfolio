@@ -1,6 +1,6 @@
 header {
-  z-index: 2000;
   width: 100%;
+  z-index: 100;
   position: fixed;
   top: 0;
   display: flex;
@@ -40,9 +40,7 @@ header {
   display: none;
 }
 .nav {
-  position: absolute;
-  right: 10px;
-  top: 20px;
+  margin-left: 10px;
 }
 .bars {
   color: aliceblue;

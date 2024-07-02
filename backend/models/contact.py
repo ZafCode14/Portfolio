@@ -18,3 +18,7 @@ class Contact(db.Model):
     def delete(self):
         db.session.delete(self)
         db.session.commit()
+    
+    @classmethod
+    def get_message_by_id(cls, id):
+        return cls.query.filter_by(id=id).first()

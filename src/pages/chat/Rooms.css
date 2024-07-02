@@ -1,0 +1,51 @@
+.rooms {
+    position: fixed;
+    right: 4vw;
+    top: 40vh;
+    height: 55vh;
+    background-color: brown;
+    overflow-y: auto;
+}
+.room {
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 10px;
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+}
+.last_message {
+    margin: 0;
+    font-weight: 100;
+    font-size: 1.1rem;
+}
+.room_container {
+    display: flex;
+    width: 100%;
+}
+.room:hover {
+    background-color: rgb(163, 165, 255);
+    cursor: pointer;
+}
+.count_new {
+    background-color: rgb(226, 82, 82);
+    color: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    top: 0;
+}
+.chat_icon {
+    width: 50px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.chat_icon:hover {
+    scale: 1.3;
+}

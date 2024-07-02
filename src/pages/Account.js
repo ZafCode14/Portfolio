@@ -3,7 +3,7 @@ import AuthService from '../services/auth.service'
 import "./Account.css"
 import { useNavigate } from 'react-router-dom';
 
-function Account(props) {
+function Account() {
     const [values, setValues] = useState({
         userId: "",
         username: "",
@@ -78,13 +78,9 @@ function Account(props) {
         },
     ]
     useEffect(() => {
-        if (props.user){
-            AuthService.data().then((result) => {
-                console.log(result.user_data);
-                setValues({ ...values, ...result.user_data });
-            }, (error) => {
-                console.log(error);
-            })
+        const data = AuthService.getCurrentData()
+        if (data){
+            setValues({ ...values, ...data.user_data });
         }
     // eslint-disable-next-line
     }, [])
@@ -117,7 +113,7 @@ function Account(props) {
         window.location.reload();
         window.scrollTo(0, 0);
     }
-    console.log(values);
+    console.log(values)
     return (
         <form onSubmit={onSubmit} className="format_page">
             <h1>Account</h1>
